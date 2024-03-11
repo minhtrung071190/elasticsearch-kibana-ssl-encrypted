@@ -134,6 +134,8 @@ if [[ "${SSL_MODE}" == "true" ]]; then
       sleep 1
     fi
   done &
+  # Add xpack.encryptedSavedObjects.encryptionKey to kibana.yml
+  echo "xpack.encryptedSavedObjects.encryptionKey: \"W0Dm4RPDrgq7EHkN3A5rrbhgOOeHJ6r8pzZ06P6RDbU=\"" >> /home/elastic/kibana-${EK_VERSION}/config/kibana.yml
 
   kibana-${EK_VERSION}/bin/kibana \
     -Q \
