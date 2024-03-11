@@ -105,7 +105,7 @@ if [[ "${SSL_MODE}" == "true" ]]; then
     if check_elasticsearch_running; then
       sleep 5;
       ELASTIC_RANDOM_PASSWORD=$(
-        elasticsearch-${EK_VERSION}/bin/elasticsearch-reset-password \
+        echo "trung@!1" | elasticsearch-${EK_VERSION}/bin/elasticsearch-reset-password \
         -v \
         --url "https://localhost:9200" \
         -u elastic \
