@@ -26,6 +26,8 @@ RUN wget -q -O - https://artifacts.elastic.co/downloads/elasticsearch/elasticsea
 
 RUN wget -q -O - https://artifacts.elastic.co/downloads/kibana/kibana-${EK_VERSION}-linux-x86_64.tar.gz | tar -zx
 
+RUN wget -q -O - https://artifacts.elastic.co/downloads/logstash/logstash-8.12.2-amd64.deb | tar -zx
+
 COPY entrypoint.sh .
 
 ENTRYPOINT ["bash", "entrypoint.sh"]
